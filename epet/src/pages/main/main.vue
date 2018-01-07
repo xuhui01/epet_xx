@@ -213,8 +213,8 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  body
-    background-color #fff
+  /*body
+    background-color #fff*/
   .xiazaiApp
     max-width 640px
     margin 0 auto

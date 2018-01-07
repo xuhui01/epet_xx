@@ -1,16 +1,33 @@
 <template>
   <div>
-    <ul class="clearfix footernav_ul bgfff">
-      <li class="index-a"><router-link to="/main" class="db"></router-link></li>
-      <li class="type-a dogon"><router-link to="/category" class="db"></router-link></li>
-      <li class="cart-a"><router-link to="/cart" class="db"></router-link></li>
-      <li class="myepet-a"><router-link to="/login" class="db"></router-link></li>
+    <ul class="clearfix footernav_ul bgfff" ref="footList">
+      <li class="index-a" @click="changePosition" ><router-link to="/main" class="db"></router-link></li>
+      <li class="type-a dogon" @click="changePosition"><router-link to="/category" class="db"></router-link></li>
+      <li class="cart-a" @click="changePosition"><router-link to="/cart" class="db"></router-link></li>
+      <li class="myepet-a" @click="changePosition"><router-link to="/login" class="db"></router-link></li>
     </ul>
   </div>
 </template>
 
 <script type="text/javascript">
-  export default {}
+  export default {
+    methods: {
+      changePosition () {
+        if (!event.target.children.length) {
+          let lis = this.$refs.footList.children;
+          for (let i = 0; i < lis.length; i++) {
+            lis[i].children[0].style.backgroundPositionX = '-85px';
+          }
+          /*lis[0].children[0].style.backgroundPosition = '-85px 0';
+          lis[1].children[0].style.backgroundPosition = '-85px -41px';
+          lis[2].children[0].style.backgroundPosition = '-85px -81px';
+          lis[3].children[0].style.backgroundPosition = '-85px -122px';*/
+
+          event.target.style.backgroundPositionX = '0';
+        }
+      }
+    }
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

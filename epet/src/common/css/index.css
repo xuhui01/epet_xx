@@ -32,6 +32,9 @@ font-size: 12px;
 .fl, .pull-left {
   float: left;
 }
+.fr, .pull-right {
+  float: right;
+}
 .c999 {
   color: #999;
 }
@@ -61,6 +64,9 @@ font-size: 12px;
 }
 .pl10, .pl {
   padding-left: 10px;
+}
+.pl5 {
+  padding-left: 5px;
 }
 .pb5 {
   padding-bottom: 5px;
