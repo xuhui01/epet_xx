@@ -28,7 +28,7 @@
             <ul>
               <li v-for="(good, index) in discountData.goods" :key="index">
                 <div class="pro-block">
-                  <a href="https://wap.epet.com/surprise/Main.html?pet_type=dog&amp;fw=0">
+                  <a href="javascript:;">
                     <div class="thispro-img loadimg-nofixed">
                       <img class="image" :src="`${good.image.image}@!300w-b`" lazy="loaded">
                       <!----> <!---->

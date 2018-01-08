@@ -21,12 +21,13 @@
           <div class="epet-search bgf">
             <div class="fl rela ft14 location">
 
-              <a href="javascript:;">
+              <router-link to="/place">
                 <span class="catordog c89">狗狗站</span>
                 <span class="c89">|</span>
-                <span data-name="my-place" class="myposition c89 ft13">重庆</span>
+                <span data-name="my-place" class="myposition c89 ft13">{{city.value}}</span>
                 <i></i>
-              </a>
+              </router-link>
+
             </div>
 
             <p class="search-text">
@@ -164,6 +165,7 @@
 
 <script type="text/javascript">
   import {mapState} from 'vuex'
+  import PubSub from 'pubsub-js'
   import carouse from '../../components/carousel/carousel.vue'
   import column from '../../components/column/column.vue'
   import xline from '../../components/xline/xline.vue'
@@ -187,6 +189,7 @@
       return {
         isShow: true,
         xinrenImg: [{image:xinrenzhuanxiang}],
+        city: {value: "北京市"}
       }
     },
 
@@ -199,6 +202,9 @@
     mounted () {
       this.$store.dispatch('requesthome');
 
+      PubSub.subscribe('city', (msg, city) => {
+        this.city = city;
+      })
     },
 
     methods: {

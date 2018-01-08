@@ -6,6 +6,7 @@ import cart from '../pages/cart/cart.vue'
 import login from '../pages/login/login.vue'
 import category_tab1 from '../pages/category_tab1/category_tab1.vue'
 import category_tab2 from '../pages/category_tab2/category_tab2.vue'
+import place from '../pages/place/place.vue'
 
 Vue.use(Router);
 
@@ -44,6 +45,10 @@ export default new Router({
     {
       path: '/login',
       component: login
+    },
+    {
+      path: '/place',
+      component: place
     }
   ]
 })

@@ -4,7 +4,7 @@
       <router-view></router-view>
     </keep-alive>
 
-    <footerNav />
+    <footerNav v-show="$route.path !== '/login'" />
   </div>
 </template>
 

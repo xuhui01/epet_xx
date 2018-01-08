@@ -3,7 +3,7 @@
     <div class="columnnavdiv">
       <ul class="hottype">
         <li class="fl" style="width: 20%;" v-for="(item, index) in columnDatas" :key="index">
-          <a :href="item.target.param">
+          <a href="javascript:;">
             <img :src="item.image" >
           </a>
         </li>
